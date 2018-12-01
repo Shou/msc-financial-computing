@@ -1,0 +1,52 @@
+
+-- Black-Scholes assumes the underlying stock price follows geometric Brownian
+-- motion.
+--
+-- Assumptions:
+--
+-- - The underlying stock price follows GBM => mu (drift) and sigma (volatility)
+--   are constants.
+--
+-- - Short-selling of shares is legally allowed.
+--
+-- - There is abank account in which we can both invest and borrow unlimited
+--   amounts of money (cash) at the same (continuously-compounded) interest rate.
+--
+-- - We can trade "fractional amounts" of shares and derivatives.
+--
+-- - The market is liquid and there are no bid-offer spreads or taxes
+--   (transaction costs).
+--
+-- These assumptions can be asked on the exam. Please revise them.
+--
+-- 1 + R = e^(r * delta)
+-- Growth factor for money over one period (timestep).
+--
+-- Even for a finite number of steps N with delta = T/N where T = total time
+-- We can use the binomial model to find an approx. price for an option.
+-- Example:
+-- Using the binomial model, find an approx. price for a European call option
+-- with K = 105 and T = 0.5 (i.e. 6 months), where the underlying share has
+-- S0 = 100, and follows GBM with mu = 0.2 and sigma = 0.3, and the
+-- annualised continuously-compounded risk-free interest rate is 5%.
+--
+-- Answer: Choose N = 6 (higher values better)
+-- QED: S = T/N = 1/12
+--   QED: u = e^(sigma * sqrt(delta)) = 1.090463
+--        d = e^(-sigma * sqrt(delta)) = 0.917042
+--        1 + R = e^(r*delta) = 1.004175
+--        Qu = (1 + R - d) / (u - d) = 0.502439
+--        Qd = 0.497561
+--   From Topic 5 slide 17
+--      C0 = 1/(1 + R)^N * sum(j=0, N)( (N choose j) * Qu^j * Qd^(N-j) )
+--
+-- Summary:
+-- Method just discussed will give approx. price for any kind of option.
+-- The higher the value of N (i.e. the smaller the value of delta = T/N), the
+-- more accurate the price.
+-- For American options etc, you have to use this method in practice (or
+-- something similar). e.g. set N = 1000, and use a computer.
+-- However, for vanilla European options (e.g. calls and puts), we can take
+-- the limit delta→0 mathematically, to get exact formulas (Black-Scholes
+-- formulas).
+-- Our proof is non-rigorous, but can easily be made rigorous. (See MTH772P).
