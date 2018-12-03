@@ -1,4 +1,6 @@
 
+module MathModellingInFinance.BrownianMotionDrift where
+
 -- | Wiener process AKA brownian motion
 -- Increments over 0 are normally distributed:
 -- W(t) - W(s) ~ N(0, t - s)
@@ -20,8 +22,8 @@ x t m sigma = x (pred t) m sigma + m * t + sigma * wiener t
 -- _actual_ price data with tau = 1 day.
 -- mu = expected growth rate of Y(t)
 -- E[Y(t)] = Y(0) * exp(mu * t) i.e. mu = m + sigma^2 / 2
-gbm 0 = undefined
-gbm t = gbm 0 * exp(m * t + sigma * wiener t)
+gbm 0 sigma m = undefined
+gbm t sigma m = gbm 0 sigma m * exp(m * t + sigma * wiener t)
 
 -- Approximating GBM with a lattice random walk
 -- --------------------------------------------

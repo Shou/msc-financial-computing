@@ -1,4 +1,6 @@
 
+module MachineLearning.PearsonsCorrelation where
+
 correlation xs ys = xys / rootedSquareSums
     where
       meanX = sum xs / fromIntegral (length xs)

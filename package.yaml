@@ -27,6 +27,7 @@ dependencies:
 - vector-sized == 1.1.1.0
 - bed-and-breakfast == 0.5
 - matrix-static == 0.2
+- gnuplot == 0.5.5.3
 
 library:
   source-dirs: src

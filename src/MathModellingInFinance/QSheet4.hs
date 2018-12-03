@@ -1,5 +1,7 @@
 
-{-# LANGUAGE PartialTypeSignatures #-}
+{-# LANGUAGE PartialTypeSignatures, ExplicitForAll #-}
+
+module MathModellingInFinance.QSheet4 where
 
 import Data.Vector.Sized as Vec
 

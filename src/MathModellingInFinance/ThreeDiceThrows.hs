@@ -1,5 +1,7 @@
 {-# LANGUAGE TypeApplications #-}
 
+module MathModellingInFinance.ThreeDiceThrows where
+
 import System.Random
 import Control.Monad
 

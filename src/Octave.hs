@@ -1,6 +1,8 @@
 
 {-# LANGUAGE TypeApplications #-}
 
+module Octave where
+
 import Control.Monad (replicateM)
 import System.Random (randomRIO)
 

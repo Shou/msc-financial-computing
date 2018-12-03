@@ -1,7 +1,10 @@
 
 {-# LANGUAGE KindSignatures, ScopedTypeVariables,
-             FlexibleContexts, DataKinds
+             FlexibleContexts, DataKinds, TypeApplications,
+             PartialTypeSignatures
 #-}
+
+module MathModellingInFinance.Misc where
 
 import Control.Monad (replicateM)
 import Data.List

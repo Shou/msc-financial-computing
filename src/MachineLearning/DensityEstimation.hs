@@ -1,6 +1,8 @@
 
 {-# LANGUAGE PartialTypeSignatures #-}
 
+module MachineLearning.DensityEstimation where
+
 bigE :: Int -> _ -> _ -> _ -> [Double]
 bigE n xn mu σ = do
   _ <- [n ..]

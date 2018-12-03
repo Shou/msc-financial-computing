@@ -1,3 +1,6 @@
+{-# LANGUAGE TypeApplications #-}
+
+module MathModellingInFinance.Lecture5 where
 
 import qualified Data.Vector as Vec
 import qualified System.Random.MWC as MWC

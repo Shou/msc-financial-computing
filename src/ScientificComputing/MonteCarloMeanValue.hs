@@ -1,10 +1,10 @@
 
 {-# LANGUAGE TypeApplications, BangPatterns, PartialTypeSignatures #-}
 
+module ScientificComputing.MonteCarloMeanValue where
+
 import Control.Monad
-
 import qualified Data.Vector as Vec
-
 import qualified System.Random.MWC as MWC
 
 weirdMeanValue (a, b) n = do

@@ -1,4 +1,6 @@
 
+module ScientificComputing.Rule90 where
+
 import Data.Bits (xor)
 
 -- [0,1,0,1,1,1,0,1,0,0]

@@ -1,4 +1,6 @@
 
+module MathModellingInFinance.BlackScholesModel where
+
 -- Black-Scholes assumes the underlying stock price follows geometric Brownian
 -- motion.
 --
